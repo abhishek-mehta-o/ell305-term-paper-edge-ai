@@ -1,0 +1,60 @@
+\documentclass[11pt,a4paper]{report}
+
+% ===================== PAGE GEOMETRY =====================
+% 1 inch margins, 0.5 inch extra left gutter, single-spaced
+\usepackage[a4paper,left=1.5in,right=1in,top=1in,bottom=1in]{geometry}
+
+% ===================== CORE PACKAGES =====================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{setspace}
+\singlespacing
+
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{circuitikz}
+\usetikzlibrary{shapes,arrows,positioning,fit,backgrounds,calc}
+
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}       % clean tables
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{caption}
+\usepackage{subcaption}
+
+% ===================== BIBLIOGRAPHY (BibTeX) =====================
+% Using natbib + BibTeX (Zotero exports .bib -> bib/references.bib)
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+
+% ===================== TITLE PAGE INFO =====================
+\title{Architectural Trade-offs in Edge AI Inference: \\
+Power, Memory, and SIMD Acceleration in Embedded Processors \\
+\large Term Paper --- ELL305 Computer Architecture}
+\author{Abhishek Mehta \\ 2024EE30767}
+\date{\today}
+
+% ===================== DOCUMENT =====================
+\begin{document}
+
+\maketitle
+\tableofcontents
+\listoffigures
+\listoftables
+
+% ---- Chapters (each is its own file under chapters/) ----
+\include{chapters/00_abstract}
+\include{chapters/01_introduction}
+\include{chapters/02_isa_foundations}
+\include{chapters/03_processor_design}
+\include{chapters/04_power_thermal}
+\include{chapters/05_memory_hierarchy}
+\include{chapters/06_simd_acceleration}
+\include{chapters/07_case_studies}
+\include{chapters/08_synthesis}
+
+% ---- Bibliography ----
+\bibliography{bib/references}
+
+\end{document}
